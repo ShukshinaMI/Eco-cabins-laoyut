@@ -1,0 +1,102 @@
+<div class="header">
+  <div class="menu">
+    <img src="./../../assets/icons/ecoCabins-logo.svg">
+    <div class="menu__nav-bar">
+      <div class="menu__nav-bar__button">Modellen</div>
+      <div class="menu__nav-bar__button">Kopen</div>
+      <div class="menu__nav-bar__button">Huren</div>
+      <div class="menu__nav-bar__button">Nieuws</div>
+    </div>
+  </div>
+  <div class="description">
+    <div class="description__name">
+      <div class="description__name_subtitle">Duurzame tiny huisjes</div>
+      <div class="description__name_title">
+        Een ecologisch tiny huisje is zoveel mogelijk
+        opgebouwd uit duurzame natuurlijke materialen
+      </div>
+    </div>
+  </div>
+  <div class="links">
+    <div class="links__button">Instagram</div>
+    <div class="links__button">Facebook</div>
+    <div class="links__button">Linkedin</div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="gallery__description">
+    <div class="gallery__description__header">Duurzame materialen</div>
+    <div class="gallery__description__text">
+      Alle EcoCabins hebben een hoge isolatiewaarde,
+      worden geproduceerd met indien mogelijk duurzame
+      en/of natuurlijke materialen en hebben als
+      opvallende uiterlijke kenmerk de ‘ronde hoeken’,
+      mogelijk gemaakt door het specifieke materiaalgebruik.
+      De voordelen van bouwen met hout zijn legio: hout is licht,
+      flexibel, isoleert goed en bouwt snel en efficiënt.
+    </div>
+    <div class="gallery__description__button">Lees meer</div>
+  </div>
+  <div class="gallery__cards" id="carousel">
+    <input class="carousel__point" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden checked="checked">
+    <div class="carousel__item">
+      <img src="./../../assets/icons/ecoCabins-1.svg" alt="First slide">
+    </div>
+
+    <input class="carousel__point" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden>
+    <div class="carousel__item">
+      <img src="./../../assets/icons/ecoCabins.svg" alt="Second slide">
+    </div>
+
+    <input class="carousel__point" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden>
+    <div class="carousel__item">
+      <img src="./../../assets/icons/ecoCabins-2.svg" alt="Third slide">
+    </div>
+
+    <input class="carousel__point" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden>
+    <div class="carousel__item">
+      <img src="./../../assets/icons/ecoCabins.svg" alt="Four slide">
+    </div>
+
+    <ol class="carousel__indicators" aria-hidden="true">
+      <li><label for="carousel-1" class="carousel__indicator">●</label></li>
+      <li><label for="carousel-2" class="carousel__indicator">●</label></li>
+      <li><label for="carousel-3" class="carousel__indicator">●</label></li>
+      <li><label for="carousel-4" class="carousel__indicator">●</label></li>
+    </ol>
+  </div>
+</div>
+
+<div class="info">
+  <div class="info__title">Innovatie</div>
+  <div class="info__description" *ngFor="let inf of info">{{inf}}</div>
+</div>
+
+<div class="info-column">
+  <img src="./../../assets/icons/ecoCabins-2.svg">
+  <div class="info-column__titles info-column_column_first">
+    <div class="info-column__title" *ngFor="let title of titles | slice:0:3" >
+      <div class="info-column__title__name">{{title.name}}</div>
+      <div class="info-column__title__description">{{title.description}}</div>
+    </div>
+  </div>
+  <div class="info-column__titles info-column_column_second">
+    <div class="info-column__title" *ngFor="let title of titles | slice:3">
+      <div class="info-column__title__name">{{title.name}}</div>
+      <div class="info-column__title__description">{{title.description}}</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer__contacts">{{mail}}</div>
+
+  <div  class="footer__logo">
+    <img src="./../../assets/icons/ecoCabins-logo.svg">
+  </div>
+  <div  class="footer__links">
+    <div>Cookies</div>
+    <div>Privacybeleid</div>
+  </div>
+</div>

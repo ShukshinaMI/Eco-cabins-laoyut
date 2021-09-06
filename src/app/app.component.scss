@@ -1,0 +1,10 @@
+.eco-cabins {
+  display: grid;
+  grid-template-rows: 636px 223px 568px 1fr 92px;
+  grid-template-columns: 100%;
+  grid-auto-flow: column;
+  height: 100%;
+  background: #222F33;
+  padding-top: 10px;
+  min-width: 600px;
+}

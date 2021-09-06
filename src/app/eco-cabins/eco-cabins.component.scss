@@ -1,0 +1,327 @@
+.header {
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  grid-template-rows: 200px 1fr;
+  background: url("./../../assets/icons/ecoCabins.svg") no-repeat;
+  background-size: 100%;
+  padding-left: 100px;
+  color: white;
+}
+
+.menu {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 38px;
+
+.menu__nav-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-column-gap: 40px;
+  justify-content: end;
+}
+
+.menu__nav-bar__button {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 14px;
+  text-align: center;
+
+  height: 34px;
+  padding-top: 10px;
+
+&:hover {
+   background: white;
+   color: #606B74;
+   border-radius: 4px;
+ }
+
+}
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+
+.description__name {
+  display: grid;
+  grid-row-gap: 12px;
+  grid-template-rows: 20px 1fr;
+}
+
+.description__name_title {
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.description__name_subtitle {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: 0.8;
+}
+}
+
+.links {
+  grid-area: 1 / 2 / 3 / 2;
+  display: grid;
+  grid-row-gap: 40px;
+  grid-auto-flow: row;
+
+  justify-content: center;
+  align-content: center;
+
+.links__button {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  writing-mode: tb;
+  text-align: center;
+}
+}
+
+.gallery {
+  display: grid;
+  grid-auto-flow: column;
+  background: white;
+  z-index: 2;
+
+.gallery__description {
+  margin-top: -50px;
+  padding: 62px 116px 0 100px;
+  height: 400px;
+  background: white;
+  min-width: 650px;
+
+.gallery__description__header {
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 38px;
+  color: #222F33;
+  padding-bottom: 15px;
+}
+
+.gallery__description__text {
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 26px;
+  color: #646D70;
+  padding-bottom: 18px;
+}
+
+.gallery__description__button {
+  height: 34px;
+  width: 90px;
+  border: 1px solid #646D70;
+  border-radius: 4px;
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #606B74;
+  padding: 10px 0;
+}
+}
+
+.gallery__cards {
+  display: flex;
+  margin: -90px 90px 0 -50px;
+  width: 300px;
+  height: 350px;
+  background: black;
+  z-index: 3;
+  overflow: hidden;
+  position: relative;
+
+.carousel__item {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+
+& > img {
+    display: block;
+    height: 350px;
+    width: 100%;
+  }
+}
+
+.carousel__point:checked + .carousel__item {
+  opacity: 1;
+}
+
+.carousel__indicators {
+  display: flex;
+  align-items: end;
+  z-index: 10;
+  width: 100%;
+  justify-content: center;
+  padding-left: 0;
+
+.carousel__indicator {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  line-height: 1;
+}
+
+li {
+  display: inline-block;
+  text-indent: 0;
+  border: none;
+}
+}
+
+#carousel-1:checked ~ .carousel__indicators .carousel__indicator[for="carousel-1"],
+#carousel-2:checked ~ .carousel__indicators .carousel__indicator[for="carousel-2"],
+#carousel-3:checked ~ .carousel__indicators .carousel__indicator[for="carousel-3"],
+#carousel-4:checked ~ .carousel__indicators .carousel__indicator[for="carousel-4"] {
+  color: white;
+}
+
+#carousel-1 ~ .carousel__indicators .carousel__indicator[for="carousel-1"],
+#carousel-2 ~ .carousel__indicators .carousel__indicator[for="carousel-2"],
+#carousel-3 ~ .carousel__indicators .carousel__indicator[for="carousel-3"],
+#carousel-4 ~ .carousel__indicators .carousel__indicator[for="carousel-4"] {
+  color: rgba(white, 0.6);
+}
+}
+}
+
+.info {;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 38px 120px;
+  grid-gap: 11px 43px;
+
+  background: #222F33;
+  color: white;
+
+  padding: 0 100px 78px;
+  align-content: end;
+
+.info__title {
+  grid-column: 1 / 3;
+  font-family: Merriweather;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 38px;
+}
+
+.info__description {
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.7;
+}
+}
+
+.info-column {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+
+  margin: 85px 100px;
+  background: white;
+
+.info-column__titles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 37px 60px;
+}
+
+.info-column__title__name {
+  font-family: Merriweather;
+  color: #222F33;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 23px;
+  padding-bottom: 10px;
+}
+
+.info-column__title__description {
+  font-family: Rubik;
+  font-size: 14px;
+  line-height: 22px;
+  color: #646D70;
+  opacity: 0.7;
+}
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 50px;
+  background: #222F33;
+  color: white;
+  font-family: Rubik;
+  font-size: 12px;
+  line-height: 14px;
+
+.footer__contacts {
+  opacity: 0.6;
+  align-self: center;
+  padding-right: 50px;
+}
+
+.footer__logo {
+  align-self: center;
+  text-align: center;
+}
+
+.footer__links {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 110px);
+  justify-content: end;
+  align-self: center;
+  text-align: right;
+  opacity: 0.6;
+}
+}
+
+
+@media screen and (max-width: 960px) {
+  .gallery .gallery__cards {
+    display: none;
+  }
+
+  .info {
+    grid-template-rows: 38px 1fr 1fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    padding-top: 60px;
+
+  .info__title {
+    grid-column: 1 / 2;
+  }
+}
+
+.info-column {
+  animation: info-column .7s;
+  grid-template-columns: 360px 1fr;
+  grid-gap: 20px;
+
+.info-column__titles {
+  grid-template-columns: 1fr;
+  padding-top: 20px;
+}
+}
+}
+
+@media screen and (max-width: 840px) {
+  .info-column {
+    grid-template-columns: 1fr;
+  }
+}
